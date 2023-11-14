@@ -20,3 +20,6 @@ x11-setup:
 
 x11-test:
 	docker run --rm ${X11-ENV} sshipway/xclock
+
+x11-opengl:
+	docker run -it --rm ${X11-ENV} -w /src -v $(PWD)/../:/src utensils/opengl:latest /src/bin/hello-gl
